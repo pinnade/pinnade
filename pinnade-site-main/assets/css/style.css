@@ -1761,6 +1761,11 @@ section,
   border: none;
   border-radius: 8px;
 }
+/* Preloader safety fix */
+#preloader.preloader-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
 
-/*--------------------------------------------------------------
-# Starter Section Section
+
