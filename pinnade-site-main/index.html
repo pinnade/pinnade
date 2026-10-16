@@ -147,7 +147,7 @@
       align-items: center;
     }*/
 
-    Logo text styling with different colors */
+    /*Logo text styling with different colors */
    .logo h2.sitename {
       margin: 0;
       font-size: 1.8rem;
@@ -156,7 +156,7 @@
     }
 
     .logo h2.sitename .brand-pinnade {
-      color: lab(24.59% 46.97 36.84 / 0.493); 
+      color: #5F3A42; 
     }
 
 
@@ -180,7 +180,7 @@
     <div class="branding d-flex align-items-center">
 
       <div class="container position-relative d-flex align-items-center justify-content-between">
-        <a href="index-2.html" class="logo d-flex align-items-center me-auto">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
           <img src="assets/img/log.jpg" alt="pinnade logo">
           <h1 class="sitename" style="color: #5F3A42;">Pinnade</h1>
         </a>
@@ -719,7 +719,30 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+<!-- Preloader safety fallback -->
+<script>
+(function () {
+  function hidePreloader() {
+    var preloader = document.getElementById('preloader');
 
+    if (preloader) {
+      preloader.classList.add('preloader-hidden');
+
+      window.setTimeout(function () {
+        if (preloader.parentNode) {
+          preloader.parentNode.removeChild(preloader);
+        }
+      }, 700);
+    }
+  }
+
+  // Hide the preloader when the page finishes loading.
+  window.addEventListener('load', hidePreloader);
+
+  // Fallback if external resources or scripts take too long.
+  window.setTimeout(hidePreloader, 4000);
+})();
+</script>
 </body>
 
 </html>
